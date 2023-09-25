@@ -1,14 +1,11 @@
 all: Frameworks/*.xcframework Frameworks/.symlinks
 
-# MPV_XCFRAMEWORKS_VERSION=v0.5.8
-# MPV_XCFRAMEWORKS_SHA256SUM=2fbaa5e21ee3af624f4e51c14252508152d703c5efc717046237b133f49bb089
-# new
-MPV_XCFRAMEWORKS_VERSION=v0.5.7
-MPV_XCFRAMEWORKS_SHA256SUM=8aef983d8ff254e85724249252d06eec17fac5936d0c742ec76fc42878b72cd4
+MPV_XCFRAMEWORKS_VERSION=v0.5.8
+MPV_XCFRAMEWORKS_SHA256SUM=2fbaa5e21ee3af624f4e51c14252508152d703c5efc717046237b133f49bb089
 
 .cache/xcframeworks/libmpv-xcframeworks-${MPV_XCFRAMEWORKS_VERSION}-ios-universal.tar.gz:
 	mkdir -p .cache/xcframeworks
-	rm -f .cache/xcframeworks/*.tmpß .cache/xcframeworks/*-ios-universal.tar.gz
+	rm -f .cache/xcframeworks/*.tmp .cache/xcframeworks/*-ios-universal.tar.gz
 	curl -L \
 		https://github.com/media-kit/libmpv-darwin-build/releases/download/${MPV_XCFRAMEWORKS_VERSION}/libmpv-xcframeworks_${MPV_XCFRAMEWORKS_VERSION}_ios-universal-audio-default.tar.gz \
 		-o .cache/xcframeworks/libmpv.tar.gz.tmp
